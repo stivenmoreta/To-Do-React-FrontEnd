@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+
+//hooks personales
+import ListaTareas from './components/ListaTareas';
+//envoltura para usar calendario, debe envolver el proyecto
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+//formato fecha y hora
+import DateFnsUtils from '@date-io/date-fns';
+//En español
+import esLocale from 'date-fns/locale/es';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <MuiPickersUtilsProvider utils={DateFnsUtils} locale={esLocale} >
+        <div className="App">
+            <ListaTareas/>
+        </div>
+      </MuiPickersUtilsProvider>
   );
 }
 
