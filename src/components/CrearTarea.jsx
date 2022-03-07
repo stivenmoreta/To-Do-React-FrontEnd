@@ -34,7 +34,7 @@ export default function CrearTarea(props) {
   const crearTarea = async () => {
     const data = {
       texto_tarea: tarea,
-      fecha_termino: dateFormat(fechaTerminoTarea, "yyyy/mm/dd h:MM:ss"),
+      fecha_termino: dateFormat(fechaTerminoTarea, "yyyy/mm/dd h:MM:ss TT"),
     };
     await axios
       .post(`https://todo-app-back-end-nodejs.herokuapp.com/api/tarea`, data)
