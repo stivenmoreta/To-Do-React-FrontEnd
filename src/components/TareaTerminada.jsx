@@ -15,9 +15,9 @@ export default function TareaTerminada(props){
         ejectur el actualizarEstadoTarea */
         /* console.log("estado que se enviara: "+!checkedEstadoTarea) */
         const data = {
-                estadoTarea: !checkedEstadoTarea
+                new_estado_tarea: !checkedEstadoTarea
         }
-        await axios.put(`http://127.0.0.1:8000/api/actualizar_estado_tarea/${props.idTarea}`,data)
+        await axios.put(`https://todo-app-back-end-nodejs.herokuapp.com/api/tarea/${props.idTarea}`,data)
         .then(response =>{
             props.listarTareas();
         }).catch(error => console.log('error al completar tarea'))

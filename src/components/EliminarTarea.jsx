@@ -10,9 +10,9 @@ export default function EliminarTarea(props){
 
     const eliminarTarea = async() =>{
         const data = {
-            eliminarTarea: true
+            eliminar_tarea: true
         }
-        await axios.put(`http://127.0.0.1:8000/api/eliminar_tarea/${props.idTarea}`,data)
+        await axios.delete(`https://todo-app-back-end-nodejs.herokuapp.com/api/tarea/${props.idTarea}`,data)
         .then(response =>{
             props.listarTareas();
         }).catch(error => console.log('error al eliminar tarea'))

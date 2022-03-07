@@ -35,10 +35,11 @@ export default function ListaTareas (){
     
 
     const listarTareas = async() =>{
-        await axios.get("http://127.0.0.1:8000/api/lista_tarea/")
+        await axios.get("https://todo-app-back-end-nodejs.herokuapp.com/api/tarea")
         .then(response =>{
             set_tareas(response.data);
             set_listaTareas(response.data);
+            console.log(response.data)
         }).catch(error => console.log('error al listar tareas'))
     }
 
@@ -49,7 +50,7 @@ export default function ListaTareas (){
 
     const filtrar=(terminoBusqueda)=>{
         var resultadosBusqueda=listaTareas.filter((elemento)=>{
-          if(elemento.textoTarea.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+          if(elemento.texto_tarea.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
           ){
             return elemento;
           }
@@ -77,20 +78,20 @@ export default function ListaTareas (){
               <h2 >Tareas</h2>
                   {tareas && tareas.map((tarea)=>(
                     <Grid container>
-                      <ListItem  id="listItem" key={tarea.idTarea}>
+                      <ListItem  id="listItem" key={tarea.id_tarea}>
                         <Grid item xs={2} sm={2} md={1}>
-                          <TareaTerminada estadoTarea={tarea.estadoTarea} listarTareas={listarTareas} idTarea={tarea.idTarea}  />
+                          <TareaTerminada estadoTarea={tarea.estado_tarea} listarTareas={listarTareas} idTarea={tarea.id_tarea}  />
                         </Grid>
                         <Grid item xs={4} sm={4} md={6}>
-                          <ListItemText style={{minWidth: 95,overflow: 'auto'}}> {tarea.estadoTarea ? <del>{tarea.textoTarea}</del> : tarea.textoTarea} </ListItemText>
+                          <ListItemText style={{minWidth: 95,overflow: 'auto'}}> {tarea.estado_tarea ? <del>{tarea.texto_tarea}</del> : tarea.texto_tarea} </ListItemText>
                         </Grid>
                         <Grid item xs={4} sm={4} md={4}>
-                          <ListItemText>{tarea.estadoTarea ?  <del>{dateFormat(tarea.fechaTermino,'dd/mm/yy h:MM TT')}</del> : dateFormat(tarea.fechaTermino,'dd/mm/yy h:MM TT')}</ListItemText>
+                          <ListItemText>{tarea.estado_tarea ?  <del>{dateFormat(tarea.fecha_termino,'dd/mm/yy h:MM TT')}</del> : dateFormat(tarea.fecha_termino,'dd/mm/yy h:MM TT')}</ListItemText>
                         </Grid>
                         <Grid item xs={2} sm={2} md={1}>
                           <ListItemSecondaryAction>
                             <ActualizarTarea listarTareas={listarTareas} tarea={tarea} />
-                            <EliminarTarea listarTareas={listarTareas} idTarea={tarea.idTarea}/>
+                            <EliminarTarea listarTareas={listarTareas} idTarea={tarea.id_tarea}/>
                           </ListItemSecondaryAction>
                         </Grid>
                       </ListItem>

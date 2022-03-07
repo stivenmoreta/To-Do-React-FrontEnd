@@ -2,6 +2,7 @@
   "name": "frontendtodo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://stivenmoreta.github.io/To-Do-React-FrontEnd",
   "dependencies": {
     "@date-io/date-fns": "^1.3.13",
     "@emotion/react": "^11.7.1",
@@ -16,12 +17,15 @@
     "axios": "^0.25.0",
     "date-fns": "^2.28.0",
     "dateformat": "^5.0.2",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^3.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
