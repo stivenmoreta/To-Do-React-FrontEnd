@@ -1,1 +1,1 @@
-error con la fecha, por reparar.
+error con la fecha, en reparacion.
