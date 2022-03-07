@@ -1,2 +1,2 @@
 error con la fecha, en reparacion...
-Funcion de igual forma.
+Funciona de igual forma.
