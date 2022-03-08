@@ -68,6 +68,10 @@
     border-color: grey !important;
 }
 
+.css-7srjgk.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border-color:#005f73 !important ;
+}
+
 /* HOOK CREARTAREA */
 #container-crear-tarea{
     display: flex;
