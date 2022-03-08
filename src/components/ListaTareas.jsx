@@ -86,7 +86,7 @@ export default function ListaTareas (){
                           <ListItemText style={{minWidth: 95,overflow: 'auto'}}> {tarea.estado_tarea ? <del>{tarea.texto_tarea}</del> : tarea.texto_tarea} </ListItemText>
                         </Grid>
                         <Grid item xs={4} sm={4} md={4}>
-                          <ListItemText>{tarea.estado_tarea ?  <del>{dateFormat(tarea.fecha_termino,'dd/mm/yy h:MM TT')}</del> : dateFormat(tarea.fecha_termino,'dd/mm/yy h:MM TT')}</ListItemText>
+                          <ListItemText>{tarea.estado_tarea ?  <del>{dateFormat(tarea.fecha_termino,'yy/mm/dd h:MM TT')}</del> : dateFormat(tarea.fecha_termino,'yy/mm/dd h:MM TT')}</ListItemText>
                         </Grid>
                         <Grid item xs={2} sm={2} md={1}>
                           <ListItemSecondaryAction>
