@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/To-Do-React-FrontEnd/static/css/main.3726c970.chunk.css",
-    "main.js": "/To-Do-React-FrontEnd/static/js/main.dfbf2692.chunk.js",
-    "main.js.map": "/To-Do-React-FrontEnd/static/js/main.dfbf2692.chunk.js.map",
+    "main.js": "/To-Do-React-FrontEnd/static/js/main.ec0eb708.chunk.js",
+    "main.js.map": "/To-Do-React-FrontEnd/static/js/main.ec0eb708.chunk.js.map",
     "runtime~main.js": "/To-Do-React-FrontEnd/static/js/runtime~main.b2939e60.js",
     "runtime~main.js.map": "/To-Do-React-FrontEnd/static/js/runtime~main.b2939e60.js.map",
     "static/js/2.c4a38e97.chunk.js": "/To-Do-React-FrontEnd/static/js/2.c4a38e97.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.fac2528f.chunk.js": "/To-Do-React-FrontEnd/static/js/3.fac2528f.chunk.js",
     "static/js/3.fac2528f.chunk.js.map": "/To-Do-React-FrontEnd/static/js/3.fac2528f.chunk.js.map",
     "index.html": "/To-Do-React-FrontEnd/index.html",
-    "precache-manifest.c270cd9f9196b770dade0e78bbd90a4b.js": "/To-Do-React-FrontEnd/precache-manifest.c270cd9f9196b770dade0e78bbd90a4b.js",
+    "precache-manifest.4e3b618f93e17f6ca77d1c039fb28434.js": "/To-Do-React-FrontEnd/precache-manifest.4e3b618f93e17f6ca77d1c039fb28434.js",
     "service-worker.js": "/To-Do-React-FrontEnd/service-worker.js",
     "static/css/main.3726c970.chunk.css.map": "/To-Do-React-FrontEnd/static/css/main.3726c970.chunk.css.map"
   }
