@@ -39,8 +39,8 @@ export default function CrearTarea(props) {
     await axios
       .post(`https://todo-app-back-end-nodejs.herokuapp.com/api/tarea`, data)
       .then((response) => {
-        console.log(response);
         props.listarTareas();
+        set_tarea("");
       })
       .catch((error) => {
         error.response.status === 406
