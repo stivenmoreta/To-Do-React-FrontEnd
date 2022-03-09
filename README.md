@@ -1,2 +1,1 @@
-error con la fecha, en reparacion...
-Funciona de igual forma.
+back-end creado con nodejs y postgres, deploy en heroku.
